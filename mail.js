@@ -16,7 +16,7 @@ let listenCtrl = (fatherSRank = 0, brotherSRank) => {
 let removeCtrlMenu = elt => {
     let esc = document.getElementById('esc-btn');
     esc.addEventListener('click', () => {
-      document.getElementsByClassName('ctrl')[elt].removeChild(document.getElementById('ctrl-menu'));      
+      document.getElementsByClassName('ctrl')[elt].removeChild(document.getElementById('ctrl__menu'));      
       listen();
     }, false);
 }
@@ -28,7 +28,7 @@ let listen = () => {
     let ctrls = document.getElementsByClassName("ctrl__btn");
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', () => {
-        if (!document.getElementById('ctrl-menu')) {            
+        if (!document.getElementById('ctrl__menu')) {            
             document.getElementsByClassName('ctrl')[elt].appendChild(window.elt.newMenu());
             listenCtrl(0, elt);
             removeCtrlMenu(elt);

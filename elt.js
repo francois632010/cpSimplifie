@@ -7,7 +7,7 @@
       return newDiv;
     };
     let newMenu = (rank, x, y) => {
-      let newMenu = newDiv(['ctrl-menu'], 'ctrl-menu');
+      let newMenu = newDiv(['ctrl__menu'], 'ctrl__menu');
       for (let ctrl of [['esc-btn', 'esc'],['ad','+++'],['suppr','---'],['reg', 'Enregister'],['fct', 'Fonctions']]) {
       let newCtrl = newDiv([ctrl[0]], ctrl[0]);
       newCtrl.innerHTML = ctrl[1];
@@ -28,7 +28,7 @@
         
         
        
-        newCtrlButton.classList.add('ctrl-btn');
+        newCtrlButton.classList.add('ctrl__btn');
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');
         newDivCtrl.style.color = "red";
