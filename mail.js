@@ -25,7 +25,7 @@ let removeCtrlMenu = elt => {
 
 let listen = () => {
     // écoute tous les boutons contrôle
-    let ctrls = document.getElementsByClassName("ctrl-btn");
+    let ctrls = document.getElementsByClassName("ctrl__btn");
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', () => {
         if (!document.getElementById('ctrl-menu')) {            
