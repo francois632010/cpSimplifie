@@ -32,29 +32,30 @@
 
       const newRank = parseInt(brotherSRank) + 1;
 
-      upGrade(newRank)
+
+      upGrade(newRank);
 
       const newArticle = document.createElement('article');
         const newTextArea = document.createElement('textarea');
         const fatherSection = document.getElementsByTagName('section')[fatherSRank];
         const newCtrlButton = document.createElement('div');
         const newDivCtrl = document.createElement('div');
-        
-        
-        
-       
+
+
+
+        newArticle.classList.add(`c${newRank}`);
         newCtrlButton.classList.add('ctrl__btn');
         newCtrlButton.classList.add(`c__b${newRank}`);
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');
         newDivCtrl.style.color = "red";
-        
+
         newDivCtrl.appendChild(newCtrlButton);
-        
-        
+
+
         newArticle.appendChild(newTextArea);
         newArticle.appendChild(newDivCtrl);
-        fatherSection.insertBefore(newArticle, document.getElementsByTagName('article')[brotherSRank + 1]);
+        fatherSection.insertBefore(newArticle, document.getElementsByTagName('article')[newRank]);
 
     };
 

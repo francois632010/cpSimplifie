@@ -1,7 +1,7 @@
 let listenCtrl = (fatherSRank = 0, rank) => {
     document.getElementById('esc-btn').addEventListener('click', () => {
         console.log('listen esc ' + rank);
-        document.getElementsByClassName(`c${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));      
+        document.getElementsByClassName(`c${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));
         listen();
     });
     document.getElementsByClassName('ad')[0].addEventListener('click', () => {
@@ -23,7 +23,7 @@ let listenCtrl = (fatherSRank = 0, rank) => {
 let removeCtrlMenu = elt => {
     let esc = document.getElementById('esc-btn');
     esc.addEventListener('click', () => {
-      document.getElementsByClassName('ctrl')[elt].removeChild(document.getElementById('ctrl__menu'));      
+      document.getElementsByClassName('ctrl')[elt].removeChild(document.getElementById('ctrl__menu'));
       listen();
     }, false);
 }
@@ -38,7 +38,7 @@ let listen = () => {
         if (!document.getElementById('ctrl__menu')) {
             // ca ne marche pas en utilisant elt donc on crée un variable rank
             let rank = Array.from(e.target.classList).filter(i => i.match(/c__b[0-9]+/))[0].slice(4);
-            console.log(rank);           
+            console.log(rank);
             document.getElementsByClassName(`c${rank}`)[0].appendChild(window.elt.newMenu());
             listenCtrl(0, rank);
             //removeCtrlMenu(elt);
