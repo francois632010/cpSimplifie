@@ -1,7 +1,13 @@
-let listenCtrl = (fatherSRank = 0, brotherSRank) => {
+let listenCtrl = (fatherSRank = 0, rank) => {
+    document.getElementById('esc-btn').addEventListener('click', () => {
+        console.log('listen esc ' + rank);
+        document.getElementsByClassName(`c${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));      
+        listen();
+    });
     document.getElementsByClassName('ad')[0].addEventListener('click', () => {
         //ajoute un ensemble textarea + bouton etc
-        elt.newCpZone(0, brotherSRank);
+        console.log('listen ad ' + rank)
+        elt.newCpZone(0, rank);
     });
     document.getElementsByClassName('suppr')[0].addEventListener('click', () => {
         alert('ho')
@@ -13,6 +19,7 @@ let listenCtrl = (fatherSRank = 0, brotherSRank) => {
         alert('le pere noel')
     });
 }
+/*
 let removeCtrlMenu = elt => {
     let esc = document.getElementById('esc-btn');
     esc.addEventListener('click', () => {
@@ -20,7 +27,7 @@ let removeCtrlMenu = elt => {
       listen();
     }, false);
 }
-
+*/
 
 
 let listen = () => {
@@ -29,10 +36,12 @@ let listen = () => {
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', (e) => {
         if (!document.getElementById('ctrl__menu')) {
-            console.log(e.target.classList[1])           
-            document.getElementsByClassName('ctrl')[elt].appendChild(window.elt.newMenu());
-            listenCtrl(0, elt);
-            removeCtrlMenu(elt);
+            // ca ne marche pas en utilisant elt donc on crée un variable rank
+            let rank = Array.from(e.target.classList).filter(i => i.match(/c__b[0-9]+/))[0].slice(4);
+            console.log(rank);           
+            document.getElementsByClassName(`c${rank}`)[0].appendChild(window.elt.newMenu());
+            listenCtrl(0, rank);
+            //removeCtrlMenu(elt);
         }
 
         }, false);
