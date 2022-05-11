@@ -33,19 +33,27 @@ let removeCtrlMenu = elt => {
 let listen = () => {
     // écoute tous les boutons contrôle
     let ctrls = document.getElementsByClassName("ctrl__btn");
+    let cps = document.getElementsByClassName("cp__btn");
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', (e) => {
         if (!document.getElementById('ctrl__menu')) {
             // ca ne marche pas en utilisant elt donc on crée un variable rank
             let rank = Array.from(e.target.classList).filter(i => i.match(/c__b[0-9]+/))[0].slice(4);
-            console.log(rank);
+            
             document.getElementsByClassName(`c${rank}`)[0].appendChild(window.elt.newMenu());
             listenCtrl(0, rank);
             //removeCtrlMenu(elt);
         }
 
         }, false);
+        
 
-}
+        cps[elt].addEventListener('click', (e) => {
+            
+            let rank = Array.from(e.target.classList).filter(i => i.match(/cp__btn[0-9]+/))[0].slice(7);
+            copy.zone(rank);
+        }, false);
+
+    }
 }
 listen();
