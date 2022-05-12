@@ -60,6 +60,7 @@ console.log('newCpZone au rang ' + brotherSRank)
 
         newArticle.classList.add(`a`);
         newArticle.classList.add(`a${newRank}`);
+        newTextArea.classList.add(`t`);
         newTextArea.classList.add(`t${newRank}`);
         newCpButton.classList.add('cp__btn');
         newCpButton.classList.add(`cp__btn${newRank}`);
@@ -68,6 +69,7 @@ console.log('newCpZone au rang ' + brotherSRank)
         newCpButton.innerHTML = "Copier";
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');
+        newDivCtrl.classList.add(`c${newRank}`);
         newDivCtrl.style.color = "red";
 
         newDivCtrl.appendChild(newCtrlButton);

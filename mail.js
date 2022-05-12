@@ -34,6 +34,7 @@ let listen = () => {
     // écoute tous les boutons contrôle
     let ctrls = document.getElementsByClassName("ctrl__btn");
     let cps = document.getElementsByClassName("cp__btn");
+    
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', (e) => {
         if (!document.getElementById('ctrl__menu')) {
