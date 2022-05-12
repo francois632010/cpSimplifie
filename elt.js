@@ -16,8 +16,8 @@
         ctrlBtns[i].classList.remove(`c__b${i}`);
         ctrlBtns[i].classList.add(`c__b${i + 1}`);
 
-        ctrls[i].classList.remove(`c${i}`);
-        ctrls[i].classList.add(`c${i + 1}`);
+        ctrls[i].classList.remove(`ctrl${i}`);
+        ctrls[i].classList.add(`ctrl${i + 1}`);
 
         ts[i].classList.remove(`t${i}`);
         ts[i].classList.add(`t${i + 1}`);
@@ -69,7 +69,7 @@ console.log('newCpZone au rang ' + brotherSRank)
         newCpButton.innerHTML = "Copier";
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');
-        newDivCtrl.classList.add(`c${newRank}`);
+        newDivCtrl.classList.add(`ctrl${newRank}`);
         newDivCtrl.style.color = "red";
 
         newDivCtrl.appendChild(newCtrlButton);
