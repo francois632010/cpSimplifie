@@ -33,7 +33,7 @@
     }
     let newMenu = () => {
       let newMenu = newDiv(['ctrl__menu'], 'ctrl__menu');
-      for (let ctrl of [['esc-btn', 'esc'],['ad','+++'],['suppr','---'],['reg', 'Enregister'],['fct', 'Fonctions']]) {
+      for (let ctrl of [['esc__btn', 'esc'],['ad__btn','+++'],['suppr__btn','---'],['reg__btn', 'Enregister'],['fct__btn', 'Fonctions']]) {
         let newCtrl = newDiv([ctrl[0]], ctrl[0]);
         newCtrl.innerHTML = ctrl[1];
         newMenu.appendChild(newCtrl);

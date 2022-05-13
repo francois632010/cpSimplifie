@@ -1,21 +1,21 @@
 let listenCtrl = (fatherSRank = 0, rank) => {
-    document.getElementById('esc-btn').addEventListener('click', () => {
+    document.getElementById('esc__btn').addEventListener('click', () => {
         console.log('listen esc ' + rank);
         document.getElementsByClassName(`ctrl${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));
         listen();
     });
-    document.getElementsByClassName('ad')[0].addEventListener('click', () => {
+    document.getElementsByClassName('ad__btn')[0].addEventListener('click', () => {
         //ajoute un ensemble textarea + bouton etc
         console.log('listen ad ' + rank)
         elt.newCpZone(0, rank);
     });
-    document.getElementsByClassName('suppr')[0].addEventListener('click', () => {
+    document.getElementsByClassName('suppr__btn')[0].addEventListener('click', () => {
         alert('ho')
     });
-    document.getElementsByClassName('reg')[0].addEventListener('click', () => {
+    document.getElementsByClassName('reg__btn')[0].addEventListener('click', () => {
         alert('c')
     });
-    document.getElementsByClassName('fct')[0].addEventListener('click', () => {
+    document.getElementsByClassName('fct__btn')[0].addEventListener('click', () => {
         alert('le pere noel')
     });
 }
