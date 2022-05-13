@@ -13,8 +13,8 @@
       let as = document.getElementsByClassName("a");
       let cp__btns = document.getElementsByClassName("cp__btn");
       for (let i = parseInt(rank); i < ctrlBtns.length; i++) {
-        ctrlBtns[i].classList.remove(`c__b${i}`);
-        ctrlBtns[i].classList.add(`c__b${i + 1}`);
+        ctrlBtns[i].classList.remove(`ctrl__btn${i}`);
+        ctrlBtns[i].classList.add(`ctrl__btn${i + 1}`);
 
         ctrls[i].classList.remove(`ctrl${i}`);
         ctrls[i].classList.add(`ctrl${i + 1}`);
@@ -65,7 +65,7 @@ console.log('newCpZone au rang ' + brotherSRank)
         newCpButton.classList.add('cp__btn');
         newCpButton.classList.add(`cp__btn${newRank}`);
         newCtrlButton.classList.add('ctrl__btn');
-        newCtrlButton.classList.add(`c__b${newRank}`);
+        newCtrlButton.classList.add(`ctrl__btn${newRank}`);
         newCpButton.innerHTML = "Copier";
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');

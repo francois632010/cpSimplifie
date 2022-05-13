@@ -39,7 +39,7 @@ let listen = () => {
         ctrls[elt].addEventListener('click', (e) => {
         if (!document.getElementById('ctrl__menu')) {
             // ca ne marche pas en utilisant elt donc on crée un variable rank
-            let rank = Array.from(e.target.classList).filter(i => i.match(/c__b[0-9]+/))[0].slice(4);
+            let rank = Array.from(e.target.classList).filter(i => i.match(/ctrl__btn[0-9]+/))[0].slice(9);
             
             document.getElementsByClassName(`ctrl${rank}`)[0].appendChild(window.elt.newMenu());
             listenCtrl(0, rank);
