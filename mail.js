@@ -18,6 +18,13 @@ let listenCtrl = (fatherSRank = 0, rank) => {
     document.getElementsByClassName('fct__btn')[0].addEventListener('click', () => {
         alert('le pere noel')
     });
+    
+    for (let btn of ['esc__btn', 'ad__btn', 'suppr__btn', 'reg__btn', 'fct__btn']) {
+        document.getElementsByClassName(btn)[0].addEventListener('click', () => {
+            ctrl.what(btn);
+        })
+    }
+    
 }
 /*
 let removeCtrlMenu = elt => {
