@@ -20,7 +20,7 @@ let listenCtrl = (fatherSRank = 0, rank) => {
         alert('le pere noel')
     });
     */
-    ctrl.listen();
+    ctrl.listen(rank);
     
 }
 /*
