@@ -7,14 +7,17 @@
         } )
         return false;
     }
-    let action = what => {
-
+    let action = (rank, e) => {
+        console.log('action');
+        console.log(rank);
+        console.log(e);
     }
-    let listen = () => {
+    let listen = rank => {
         let ctrlChoice = document.getElementsByClassName('ctrl__menu__choice');
         for (let i = 0; i < ctrlChoice.length; i++) {
             ctrlChoice[i].addEventListener('click', e => {
-                console.log(e);
+
+                action(rank, e);
             })
         }
     }
