@@ -42,7 +42,8 @@
       return newMenu;
     };
 
-    let newCpZone = (fatherSRank, brotherSRank) => {
+    let newCpZone = (brotherSRank, fatherSRank = 0) => {
+      // le father rank sera utilisé quand on s'attaquera à l'ajout de section
 console.log('newCpZone au rang ' + brotherSRank)
       const newRank = parseInt(brotherSRank) + 1;
 

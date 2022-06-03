@@ -47,6 +47,7 @@ let listen = () => {
             
             document.getElementsByClassName(`ctrl${rank}`)[0].appendChild(window.elt.newMenu());
             listenCtrl(0, rank);
+            return listen();
             //removeCtrlMenu(elt);
         }
 

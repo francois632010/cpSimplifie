@@ -8,7 +8,12 @@
         return false;
     }
     let addAZone = rank => {
-        console.log('addAZone')
+        elt.newCpZone(rank);
+    }
+    let escape = rank => {
+        console.log('escape')
+        document.getElementsByClassName(`ctrl${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));
+        return mail.listen();
     }
     let action = (rank, e) => {
         console.log('action');
@@ -17,6 +22,9 @@
         // pour la suite on ira chercher dans var.js toutes les regex à tester
         // et on bouclera sur ce tableau
         if (/ad/.test(e)) addAZone(rank);
+        if (/esc/.test(e)) escape(rank);
+
+        return mail.listen();
     }
     let listen = rank => {
         // trop d effet de bord
