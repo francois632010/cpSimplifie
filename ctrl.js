@@ -12,19 +12,19 @@
     }
     let escape = rank => {
         console.log('escape')
+        console.log(document.getElementsByClassName("ctrl__btn"));
         document.getElementsByClassName(`ctrl${rank}`)[0].removeChild(document.getElementById('ctrl__menu'));
-        return mail.listen();
+        
+        
     }
     let action = (rank, e) => {
-        console.log('action');
-        console.log(rank);
-        console.log(e);
+
         // pour la suite on ira chercher dans var.js toutes les regex à tester
         // et on bouclera sur ce tableau
         if (/ad/.test(e)) addAZone(rank);
         if (/esc/.test(e)) escape(rank);
 
-        return mail.listen();
+        
     }
     let listen = rank => {
         // trop d effet de bord
@@ -39,6 +39,7 @@
                 action(rank, e.target.classList[1]);
             })
         }
+        
     }
 
     window.ctrl = {

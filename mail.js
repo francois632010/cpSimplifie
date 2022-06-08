@@ -36,6 +36,7 @@ let removeCtrlMenu = elt => {
 
 let listen = () => {
     // écoute tous les boutons contrôle
+    
     let ctrls = document.getElementsByClassName("ctrl__btn");
     let cps = document.getElementsByClassName("cp__btn");
     
@@ -47,7 +48,10 @@ let listen = () => {
             
             document.getElementsByClassName(`ctrl${rank}`)[0].appendChild(window.elt.newMenu());
             listenCtrl(0, rank);
-            return listen();
+            
+            
+            
+            
             //removeCtrlMenu(elt);
         }
 
@@ -62,4 +66,4 @@ let listen = () => {
 
     }
 }
-listen();
+setInterval(listen, 500)
