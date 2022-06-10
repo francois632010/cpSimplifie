@@ -90,7 +90,8 @@
 
     window.elt = {
         newMenu: newMenu,
-        newCpZone: newCpZone
+        newCpZone: newCpZone,
+        upGrade: upGrade
     }
 
 
