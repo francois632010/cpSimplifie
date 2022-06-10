@@ -1,5 +1,5 @@
 
-
+reg.test();
 
 let listen = () => {
     // écoute tous les boutons contrôle
