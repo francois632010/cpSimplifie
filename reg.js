@@ -10,11 +10,15 @@
         console.log(localStorage.getItem(`test`) + " ajout !!!");
 
         return false;
-    }
+    };
 
+    let zone = rank => sessionStorage.setItem(rank, document.getElementsByClassName(`t${rank}`)[0].innerHTML);
+    let getZone = rank => sessionStorage.getItem(rank);
 
     window.reg = {
-        test: test
+        test: test,
+        zone: zone,
+        getZone: getZone
     }
 
 

@@ -14,6 +14,8 @@
       let ts = document.getElementsByClassName("t");
       let as = document.getElementsByClassName("a");
       let cp__btns = document.getElementsByClassName("cp__btn");
+      let reg__btns = document.getElementsByClassName("reg__btn");
+
       for (let i = parseInt(rank); i < ctrlBtns.length; i++) {
         ctrlBtns[i].classList.remove(`ctrl__btn${i}`);
         ctrlBtns[i].classList.add(`ctrl__btn${i + j}`);
@@ -29,6 +31,9 @@
 
         cp__btns[i].classList.remove(`cp__btn${i}`);
         cp__btns[i].classList.add(`cp__btn${i + j}`);
+
+        reg__btns[i].classList.remove(`reg__btn${i}`);
+        reg__btns[i].classList.add(`reg__btn${i + j}`);
 
 
       }
@@ -57,6 +62,7 @@
         const newTextArea = document.createElement('textarea');
         const fatherSection = document.getElementsByTagName('section')[fatherSRank];
         const newCpButton = document.createElement('div');
+        const newRegButton = document.createElement('div');
         const newCtrlButton = document.createElement('div');
         const newDivCtrl = document.createElement('div');
 
@@ -67,9 +73,12 @@
         newTextArea.classList.add(`t${newRank}`);
         newCpButton.classList.add('cp__btn');
         newCpButton.classList.add(`cp__btn${newRank}`);
+        newRegButton.classList.add('reg__btn');
+        newRegButton.classList.add(`reg__btn${newRank}`);
         newCtrlButton.classList.add('ctrl__btn');
         newCtrlButton.classList.add(`ctrl__btn${newRank}`);
         newCpButton.innerHTML = "Copier";
+        newRegButton.innerHTML = "REG";
         newCtrlButton.innerHTML = "Contrôle"
         newDivCtrl.classList.add('ctrl');
         newDivCtrl.classList.add(`ctrl${newRank}`);
@@ -80,6 +89,7 @@
 
         newArticle.appendChild(newTextArea);
         newArticle.appendChild(newCpButton);
+        newArticle.appendChild(newRegButton);
         newArticle.appendChild(newDivCtrl);
         fatherSection.insertBefore(newArticle, document.getElementsByTagName('article')[newRank]);
 
