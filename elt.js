@@ -54,7 +54,6 @@
       // le father rank sera utilisé quand on s'attaquera à l'ajout de section
       const newRank = parseInt(brotherSRank) + 1;
 
-
       upGrade(newRank, 1);
 
       const newArticle = document.createElement('article');

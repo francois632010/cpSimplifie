@@ -6,6 +6,7 @@
         return false;
     }
     let addAZone = rank => {
+        
         elt.newCpZone(rank);
     }
     let escape = (rank) => {
@@ -16,7 +17,8 @@
         elt.upGrade((rank + 1), -1);
     }
     let action = (rank, e) => {
-
+        let reg__btns = document.getElementsByClassName("reg__btn");
+        console.log(reg__btns)
         // pour la suite on ira chercher dans var.js toutes les regex à tester
         // et on bouclera sur ce tableau
         if (/ad/.test(e)) addAZone(rank);

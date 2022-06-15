@@ -13,7 +13,7 @@ let listen = () => {
         if (!document.getElementById('ctrl__menu')) {
             // ca ne marche pas en utilisant elt donc on crée un variable rank
             let rank = Array.from(e.target.classList).filter(i => i.match(/ctrl__btn[0-9]+/))[0].slice(9);
-            
+        
             document.getElementsByClassName(`ctrl${rank}`)[0].appendChild(window.elt.newMenu());
             ctrl.listen(rank);
             
@@ -34,11 +34,10 @@ let listen = () => {
 
         regs[elt].addEventListener('click', (e) => {
             let rank = Array.from(e.target.classList).filter(i => i.match(/reg__btn[0-9]+/))[0].slice(8);
-            console.log(rank)
             reg.zone(rank);
             console.log(reg.getZone(rank))
            
-        })
+        }, false);
 
     }
     
