@@ -16,14 +16,17 @@
         document.getElementsByClassName(`s${father}`)[0].removeChild(document.getElementsByClassName(`a${rank}`)[0]);
         elt.upGrade((rank + 1), -1);
     }
+    let reg = rank => {
+        window.reg.zone(rank);
+        console.log(window.reg.getZone(rank));
+    }
     let action = (rank, e) => {
-        let reg__btns = document.getElementsByClassName("reg__btn");
-        console.log(reg__btns)
         // pour la suite on ira chercher dans var.js toutes les regex à tester
         // et on bouclera sur ce tableau
         if (/ad/.test(e)) addAZone(rank);
         if (/esc/.test(e)) escape(rank);
         if (/suppr/.test(e)) suppr(0, rank);
+        if (/reg/.test(e)) reg(rank);
 
         
     }

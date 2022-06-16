@@ -16,10 +16,6 @@ let listen = () => {
         
             document.getElementsByClassName(`ctrl${rank}`)[0].appendChild(window.elt.newMenu());
             ctrl.listen(rank);
-            
-            
-            
-            
             //removeCtrlMenu(elt);
         }
 
@@ -30,13 +26,6 @@ let listen = () => {
             
             let rank = Array.from(e.target.classList).filter(i => i.match(/cp__btn[0-9]+/))[0].slice(7);
             copy.zone(rank);
-        }, false);
-
-        regs[elt].addEventListener('click', (e) => {
-            let rank = Array.from(e.target.classList).filter(i => i.match(/reg__btn[0-9]+/))[0].slice(8);
-            reg.zone(rank);
-            console.log(reg.getZone(rank))
-           
         }, false);
 
     }
