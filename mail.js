@@ -1,5 +1,11 @@
-
-reg.test();
+let build = () => {
+    let storages = Object.entries(localStorage);
+    let zones = storages.filter(item => parseInt(item[0])).map(item => parseInt(item[0]));
+    
+    for (let i of zones) {
+        console.log(localStorage.getItem(i));
+    }
+}
 
 let listen = () => {
     // écoute tous les boutons contrôle
@@ -31,4 +37,5 @@ let listen = () => {
     }
     
 }
+build();
 setInterval(listen, 500)

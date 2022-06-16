@@ -12,8 +12,8 @@
         return false;
     };
 
-    let zone = rank => sessionStorage.setItem(rank, document.getElementsByClassName(`t${rank}`)[0].value);
-    let getZone = rank => sessionStorage.getItem(rank);
+    let zone = rank => localStorage.setItem(rank, document.getElementsByClassName(`t${rank}`)[0].value);
+    let getZone = rank => localStorage.getItem(rank);
 
     window.reg = {
         test: test,
