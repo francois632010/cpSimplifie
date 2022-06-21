@@ -1,8 +1,10 @@
 let build = () => {
+    console.log(parseInt('0'))
     let storages = Object.entries(localStorage);
-    let zones = storages.filter(item => parseInt(item[0])).map(item => parseInt(item[0]));
+    let zones = storages.filter(item => parseInt(item[0]) || item[0] == 0).map(item => parseInt(item[0]));
     
     for (let i of zones) {
+        console.log(i);
         console.log(localStorage.getItem(i));
     }
 }
@@ -12,7 +14,7 @@ let listen = () => {
     
     let ctrls = document.getElementsByClassName("ctrl__btn");
     let cps = document.getElementsByClassName("cp__btn");
-    let regs = document.getElementsByClassName("reg__btn");
+    //let regs = document.getElementsByClassName("reg__btn");
     
     for (let elt = 0; elt < ctrls.length; elt++) {
         ctrls[elt].addEventListener('click', (e) => {
