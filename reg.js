@@ -14,13 +14,13 @@ let zones = storages.filter(item => Number(item[0]) || item[0] == '0').map(item 
 
         return false;
     };
-    let upGrade = (rank, onSession = true) => {
+    let upGrade = (rank, upOrDown = 1, onSession = true) => {
 
         //for (let i = zones.length - 1; i > rank; zones) 
         console.log(zones)
     }
     let zone = rank => {
-        upGrade(rank, false);
+        upGrade(rank, 1, false);
         localStorage.setItem(rank, document.getElementsByClassName(`t${rank}`)[0].value);
     }
     let getZone = rank => localStorage.getItem(rank);
